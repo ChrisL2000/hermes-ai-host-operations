@@ -1,0 +1,18 @@
+# /etc/hermes/config.yaml — Hermes managed scope (system-wide, all users, all installs on this host).
+# Merged on top of every user's ~/.hermes/config.yaml; keys set here cannot be changed by users.
+# Only providers/aliases are set — each user still chooses their own default model.
+
+providers:
+  vllm-b70-qwen38:
+    name: vllm-b70-qwen38
+    api: http://localhost:8081/v1
+    api_key: CHANGEME
+    default_model: Qwen3.8-27B
+    context_length: 131072
+    models:
+      - Qwen3.8-27B
+
+model_aliases:
+  qwen-b70:
+    model: Qwen3.8-27B
+    provider: vllm-b70-qwen38

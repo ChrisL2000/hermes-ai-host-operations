@@ -1,0 +1,13 @@
+[Unit]
+Description=Toggle display stack (headless vs graphical) based on kernel cmdline
+DefaultDependencies=no
+After=systemd-fsckd.service local-fs.target
+Before=multi-user.target graphical.target display-manager.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/local/sbin/headless-switch.sh
+
+[Install]
+WantedBy=basic.target

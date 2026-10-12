@@ -1,0 +1,4 @@
+# /etc/sudoers.d/chrismok-hermes  (captured from `sudo -l` on zeppo)
+# admin user keeps full sudo (password); passwordless only for the zeppo service account's Hermes venv
+chrismok ALL=(ALL:ALL) ALL
+chrismok ALL=(ALL) NOPASSWD: /home/zeppo/.hermes/hermes-agent/venv/bin/*

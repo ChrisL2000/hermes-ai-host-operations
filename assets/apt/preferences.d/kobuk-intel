@@ -1,0 +1,7 @@
+Package: *
+Pin: origin ppa.launchpadcontent.net
+Pin-Priority: 100
+
+Package: intel-opencl-icd libze-intel-gpu1 libze1 intel-ocloc libigdgmm12 libigc2 libigdfcl2 intel-igc-cm libze-intel-gpu-raytracing1 intel-metrics-discovery
+Pin: origin ppa.launchpadcontent.net
+Pin-Priority: 700

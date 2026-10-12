@@ -1,0 +1,7 @@
+Package: *
+Pin: origin repositories.intel.com
+Pin-Priority: 100
+
+Package: intel-opencl-icd libze-intel-gpu1 libze1 intel-ocloc libigdgmm12 intel-igc-core-2 intel-igc-opencl-2 intel-level-zero-gpu
+Pin: origin repositories.intel.com
+Pin-Priority: 600

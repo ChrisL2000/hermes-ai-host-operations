@@ -1,0 +1,1 @@
+deb [arch=amd64 signed-by=/usr/share/keyrings/kobuk-intel.gpg] https://ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu noble main

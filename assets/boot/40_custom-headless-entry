@@ -1,0 +1,14 @@
+	# --- Zeppo headless entry (managed by headless-switch; regenerate with update-grub) ---
+	menuentry 'Debian GNU/Linux (headless, no display server)' --class debian --class gnu-linux --class gnu --class os {
+		load_video
+		insmod gzio
+		if [ x$grub_platform = xxen ]; then insmod xzio; insmod lzopio; fi
+		insmod part_gpt
+		insmod ext2
+		search --no-floppy --fs-uuid --set=root de13387d-0883-4ac8-be25-de2781836fc9
+		echo	'Loading Linux 7.1.13+deb13-amd64 (headless) ...'
+		linux	/vmlinuz-7.1.13+deb13-amd64 root=/dev/mapper/zeppo--vg-root ro quiet systemd.unit=multi-user.target zeppo.headless
+		echo	'Loading initial ramdisk ...'
+		initrd	/initrd.img-7.1.13+deb13-amd64
+	}
+	# --- end headless entry ---
